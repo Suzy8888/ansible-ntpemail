@@ -1,0 +1,12 @@
+---
+- name: Query Hostname and Timedatectl
+  hosts: aws
+  gather_facts: no
+  roles:
+    - ntp
+
+- name: Send Email
+  hosts: localhost
+  gather_facts: no
+  roles:
+    - email
