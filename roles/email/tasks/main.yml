@@ -1,0 +1,3 @@
+---
+- name: Send Email with Attachment
+  shell: echo "Please find the attached csv file containing the NTP status of servers queried." | mail -s "NTP status of servers queried" -a output/ntp_status_output.csv xuzi.lau@singtel.com

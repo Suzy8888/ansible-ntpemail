@@ -1,0 +1,16 @@
+"Hostname: ip-10-187-1-20.ap-southeast-1.compute.internal"
+"Local time: Mon 2023-10-02 17:50:52 +08"
+"Universal time: Mon 2023-10-02 09:50:52 UTC"
+"RTC time: Mon 2023-10-02 09:50:53"
+"Time zone: Asia/Singapore (+08, +0800)"
+"System clock synchronized: yes"
+"NTP service: yes"
+
+"Hostname: ip-10-187-1-21.ap-southeast-1.compute.internal"
+"Local time: Mon 2023-10-02 09:50:52 UTC"
+"Universal time: Mon 2023-10-02 09:50:52 UTC"
+"RTC time: Mon 2023-10-02 09:50:53"
+"Time zone: n/a (UTC, +0000)"
+"System clock synchronized: yes"
+"NTP service: yes"
+

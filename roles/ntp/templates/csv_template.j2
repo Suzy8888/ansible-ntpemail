@@ -1,0 +1,4 @@
+"Hostname","Local time","Universal time","RTC time","Time zone","System clock synchronized","NTP service"
+{% for host in ansible_play_hosts %}
+"{{ hostvars[host].hostname_output.stdout_lines[0] | trim }}","{{ hostvars[host].timedatectl_output.stdout_lines[0] | replace('Local time:', '') | trim }}","{{ hostvars[host].timedatectl_output.stdout_lines[1] | replace('Universal time:', '') | trim }}","{{ hostvars[host].timedatectl_output.stdout_lines[2] | replace('RTC time:', '') | trim }}","{{ hostvars[host].timedatectl_output.stdout_lines[3] | replace('Time zone:', '') | trim }}","{{ hostvars[host].timedatectl_output.stdout_lines[4] | replace('NTP enabled:', '') | trim }}","{{ hostvars[host].timedatectl_output.stdout_lines[5] | replace('NTP synchronized:', '') | trim }}"
+{% endfor %}

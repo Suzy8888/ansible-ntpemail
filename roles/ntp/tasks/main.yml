@@ -1,0 +1,20 @@
+---
+- name: Get Hostname
+  command: hostname
+  register: hostname_output
+
+- name: Execute timedatectl command
+  command: timedatectl
+  register: timedatectl_output
+
+- name: Create CSV file
+  template:
+    src: csv_template.j2
+    dest: output/ntp_status_output.csv
+  delegate_to: localhost
+
+- name: Create TXT file
+  template: 
+    src: txt_template.j2
+    dest: output/ntp_status_output.txt
+  delegate_to: localhost

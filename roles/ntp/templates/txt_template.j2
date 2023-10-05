@@ -1,0 +1,10 @@
+{% for host in groups['aws'] %}
+"Hostname: {{ hostvars[host].hostname_output.stdout_lines[0] | trim }}"
+"Local time: {{ hostvars[host].timedatectl_output.stdout_lines[0] | replace('Local time:', '') | trim }}"
+"Universal time: {{ hostvars[host].timedatectl_output.stdout_lines[1] | replace('Universal time:', '') | trim }}"
+"RTC time: {{ hostvars[host].timedatectl_output.stdout_lines[2] | replace('RTC time:', '') | trim }}"
+"Time zone: {{ hostvars[host].timedatectl_output.stdout_lines[3] | replace('Time zone:', '') | trim }}"
+"System clock synchronized: {{ hostvars[host].timedatectl_output.stdout_lines[4] | replace('NTP enabled:', '') | trim }}"
+"NTP service: {{ hostvars[host].timedatectl_output.stdout_lines[5] | replace('NTP synchronized:', '') | trim }}"
+
+{% endfor %}
